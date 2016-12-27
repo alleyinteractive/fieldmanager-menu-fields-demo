@@ -26,7 +26,7 @@ class FM_Menu_Fields_Walker_Nav_Menu_Edit extends Walker_Nav_Menu_Edit {
 		$item_output = '';
 		parent::start_el( $item_output, $item, $depth, $args, $id );
 		$output .= preg_replace(
-			'/(?=<p[^>]+class="[^"]*field-move)/',
+			'/(?=<fieldset[^>]+class="[^"]*field-move)/',
 			apply_filters( 'fmmfd_walker_nav_menu_edit_start_el', '', $item, $depth ),
 			$item_output
 		);
